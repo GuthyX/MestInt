@@ -51,5 +51,22 @@ namespace Mestintv._1.AllapotTer
 
             return builder.ToString();
         }
+		 public override bool Equals(object obj)
+        {
+            Allapot osszehasonlitandoAllapot = (Allapot)obj;
+            for (int i = 0; i <matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i,j] != osszehasonlitandoAllapot.matrix[i, j])
+                    {
+                        return false;
+                    }
+                }
+              
+            }
+
+            return true;
+        }
     }
 }
