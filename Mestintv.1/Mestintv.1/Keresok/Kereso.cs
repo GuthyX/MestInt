@@ -24,23 +24,55 @@ namespace Mestintv._1.Keresok
 
         private void operatorokFeltoltese()
         {
+            //Z1
+            operatorok.Add(new Operator("Z1", 0, 1));
+            operatorok.Add(new Operator("Z1", 1, 1));
+            operatorok.Add(new Operator("Z1", 2, 1));
+            operatorok.Add(new Operator("Z1", 2, 0));
+            operatorok.Add(new Operator("Z1", 3, 1));
+            operatorok.Add(new Operator("Z1", 4, 1));
+            operatorok.Add(new Operator("Z1", 4, 0));
 
-            for (int s = 0; s < 5; s++) //játéktábla sorai
-            {
-                for (int o = 0; o < 3; o++) //játéktábla oszlopai
-                {
+            //Z2
+            operatorok.Add(new Operator("Z2", 1, 1));
+            operatorok.Add(new Operator("Z2", 2, 1));
+            operatorok.Add(new Operator("Z2", 2, 0));
+            operatorok.Add(new Operator("Z2", 3, 1));
+            operatorok.Add(new Operator("Z2", 4, 1));
+            operatorok.Add(new Operator("Z2", 4, 2));
 
-                    operatorok.Add(new Operator("Z2", s, o));
-                    operatorok.Add(new Operator("Z1", s, o));
+            //Z3
+            operatorok.Add(new Operator("Z3", 0, 1));
+            operatorok.Add(new Operator("Z3", 1, 1));
+            operatorok.Add(new Operator("Z3", 2, 1));
+            operatorok.Add(new Operator("Z3", 2, 0));
+            operatorok.Add(new Operator("Z3", 3, 1));
+            operatorok.Add(new Operator("Z3", 4, 1));
 
-                    operatorok.Add(new Operator("Z3", s, o));
+            //P2
+            operatorok.Add(new Operator("P2", 3, 1));
+            operatorok.Add(new Operator("P2", 2, 1));
+            operatorok.Add(new Operator("P2", 2, 0));
+            operatorok.Add(new Operator("P2", 1, 1));
+            operatorok.Add(new Operator("P2", 0, 1));
+            operatorok.Add(new Operator("P2", 0, 0));
 
-                    operatorok.Add(new Operator("P1", s, o));
-                    operatorok.Add(new Operator("P2", s, o));
-                    operatorok.Add(new Operator("P3", s, o));
-                }
-            }
-
+            //P1
+            operatorok.Add(new Operator("P1", 4, 1));
+            operatorok.Add(new Operator("P1", 3, 1));
+            operatorok.Add(new Operator("P1", 2, 1));
+            operatorok.Add(new Operator("P1", 2, 0));
+            operatorok.Add(new Operator("P1", 1, 1));
+            operatorok.Add(new Operator("P1", 0, 1));
+            operatorok.Add(new Operator("P1", 0, 2));
+            //P3
+            operatorok.Add(new Operator("P1", 4, 1));
+            operatorok.Add(new Operator("P1", 3, 1));
+            operatorok.Add(new Operator("P1", 2, 1));
+            operatorok.Add(new Operator("P1", 2, 0));
+            operatorok.Add(new Operator("P1", 1, 1));
+            operatorok.Add(new Operator("P1", 0, 1));
+         
 
         }
 
