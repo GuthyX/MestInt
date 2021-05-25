@@ -23,14 +23,57 @@ namespace Mestintv._1.AllapotTer
         public bool celfeltetel()
         {
             if (matrix[0, 0] == "P1" && matrix[0, 1] == "P2" && matrix[0, 2] == "P3" &&
-                matrix[4, 0] == "Z1" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z3")
+                   (matrix[4, 0] == "Z1" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z1" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z1" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z1") ||
+
+                matrix[0, 0] == "P1" && matrix[0, 1] == "P3" && matrix[0, 2] == "P2" &&
+                  (matrix[4, 0] == "Z1" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z1" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z1" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z1") ||
+
+                matrix[0, 0] == "P2" && matrix[0, 1] == "P1" && matrix[0, 2] == "P3" &&
+                  (matrix[4, 0] == "Z1" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z1" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z1" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z1") ||
+
+                matrix[0, 0] == "P2" && matrix[0, 1] == "P3" && matrix[0, 2] == "P1" &&
+                  (matrix[4, 0] == "Z1" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z1" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z1" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z1") ||
+
+                matrix[0, 0] == "P3" && matrix[0, 1] == "P2" && matrix[0, 2] == "P1" &&
+                  (matrix[4, 0] == "Z1" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z1" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z1" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z1") ||
+
+                matrix[0, 0] == "P3" && matrix[0, 1] == "P1" && matrix[0, 2] == "P2" &&
+                  (matrix[4, 0] == "Z1" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z1" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z3" && matrix[4, 2] == "Z1" ||
+                matrix[4, 0] == "Z2" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z3" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z1" && matrix[4, 2] == "Z2" ||
+                matrix[4, 0] == "Z3" && matrix[4, 1] == "Z2" && matrix[4, 2] == "Z1") 
+               )
             {
                 return true;
             }
-            //if (matrix[3,1] == "P2")
-            //{
-            //    return true;
-            //}
+    
             return false;
         }
         public override string ToString()

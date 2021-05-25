@@ -82,10 +82,10 @@ namespace Mestintv._1.AllapotTer
                 }
             }
 
-
-            Thread.Sleep(500);
-            Console.WriteLine(ujAllapot.ToString());
-            //lépés
+           
+          
+            //Console.WriteLine(ujAllapot.ToString());
+        
          
 
             return ujAllapot;
@@ -93,76 +93,72 @@ namespace Mestintv._1.AllapotTer
 
         public bool Elofeltetel(Allapot allapot)
         {
-            if (allapot.matrix[x, y] == "F")
+            if (allapot.matrix[x,y] == "F")
             {
                 return false;
             }
-            if ((allapot.matrix[x, y] == "P2" || allapot.matrix[x, y] == "P3" || allapot.matrix[x, y] == "P1") ||
-                (allapot.matrix[x, y] == "Z2" || allapot.matrix[x, y] == "Z3" || allapot.matrix[x, y] == "Z1"))
-            {
-                return false;
-            }
-              
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 2; j++)
-                {
-                   
-                       
-                        if (allapot.matrix[i,j] == "Z1")
-                        {
-            
-                        if (i + 1 < x || j - 1 >y ||
-                                    j + 1 < y || j - 1 > y || i+1 == x && j-1 == y)
-                        {
-                            break;
-                        }
-                        }
-                        if (allapot.matrix[i, j] == "Z2")
-                        {
-                        if (i + 1 < x || j - 1 > y ||
-                                      j + 1 < y || j - 1 > y  )
-                        {
-                           break;
-                        }
-                    }
-                        if (allapot.matrix[i, j] == "Z3")
-                        {
-                        if (i + 1 < x || j - 1 > y ||
-                                 j + 1 < y || j - 1 > y || i == x && j-1 == y)
-                        {
-                            break;
-                        }
-                    }
-                        if (allapot.matrix[i, j] == "P1")
-                    {
-                        if (i + 1 < x || j - 1 > y ||
-                                  j + 1 < y || j - 1 > y)
-                        {
-                            break;
-                        }
-                    }
-                        if (allapot.matrix[i, j] == "P2")
-                    {
-                        if (i + 1 < x || j - 1 > y ||
-                                  j + 1 < y || j - 1 > y)
-                        {
-                           break;
-                        }
 
+
+            if (allapot.matrix[x, y] == "Z2" || allapot.matrix[x, y] == "Z1" || allapot.matrix[x, y] == "Z3" ||
+                allapot.matrix[x, y] == "P1" || allapot.matrix[x, y] == "P2" || allapot.matrix[x, y] == "P3")
+            {
+                return false;
+            }
+       
+            int segedx = 0;
+            int segedy = 0;
+
+            for (int i = 0; i < allapot.matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < allapot.matrix.GetLength(1); j++)
+                {
+
+                    if (nev == allapot.matrix[i, j])
+                    {
+                        segedx = i;
+                        segedy = j;
                     }
-                        if (allapot.matrix[i, j] == "P3")
-                        {
-                        if (i + 1 < x || j - 1 > y ||
-                                 j + 1 < y || j - 1 > y)
-                        {
-                            break;
-                        }
-                    }
-                   
                 }
             }
-            return true;
+            if (segedx == 4 && segedy == 0 && nev == "Z1" || segedx == 4 && segedy == 1 && nev == "Z2" || segedx == 4 && segedy == 2 && nev == "Z3" ||
+              segedx == 4 && segedy == 0 && nev == "Z1" || segedx == 4 && segedy == 1 && nev == "Z3" || segedx == 4 && segedy == 2 && nev == "Z2" ||
+              segedx == 4 && segedy == 0 && nev == "Z2" || segedx == 4 && segedy == 1 && nev == "Z1" || segedx == 4 && segedy == 2 && nev == "Z3" ||
+              segedx == 4 && segedy == 0 && nev == "Z2" || segedx == 4 && segedy == 1 && nev == "Z3" || segedx == 4 && segedy == 2 && nev == "Z1" ||
+              segedx == 4 && segedy == 0 && nev == "Z3" || segedx == 4 && segedy == 1 && nev == "Z2" || segedx == 4 && segedy == 2 && nev == "Z1" ||
+              segedx == 4 && segedy == 0 && nev == "Z3" || segedx == 4 && segedy == 1 && nev == "Z1" || segedx == 4 && segedy == 2 && nev == "Z2")
+            {
+                return false;
+            }
+            if (segedx == 0 && segedy == 0 && nev == "P1" || segedx == 0 && segedy == 1 && nev == "P2" || segedx == 0 && segedy == 2 && nev == "P3" ||
+               segedx == 0 && segedy == 0 && nev == "P1" || segedx == 0 && segedy == 1 && nev == "P3" || segedx == 0 && segedy == 2 && nev == "P2" ||
+               segedx == 0 && segedy == 0 && nev == "P2" || segedx == 0 && segedy == 1 && nev == "P1" || segedx == 0 && segedy == 2 && nev == "P3" ||
+               segedx == 0 && segedy == 0 && nev == "P2" || segedx == 0 && segedy == 1 && nev == "P3" || segedx == 0 && segedy == 2 && nev == "P1" ||
+               segedx == 0 && segedy == 0 && nev == "P3" || segedx == 0 && segedy == 1 && nev == "P2" || segedx == 0 && segedy == 2 && nev == "P1" ||
+               segedx == 0 && segedy == 0 && nev == "P3" || segedx == 0 && segedy == 1 && nev == "P1" || segedx == 0 && segedy == 2 && nev == "P2")
+            {
+                return false;
+            }
+
+            if (segedx+1 < x)
+            {
+                return false;
+            }
+            if (segedx-1 > x)
+            {
+                return false;
+            }
+            if (segedy+1 <y)
+            {
+                return false;
+            }
+            if (segedy-1> y )
+            {
+                return false;
+            }
+        
+
+         
+         return true;
         }
-        }
+    }
 }

@@ -31,6 +31,7 @@ namespace Mestintv._1
                     Console.WriteLine(a.ToString());
                 }
             }
+            label1.Text = keresok[0].Utvonal.Count.ToString();
         }
     }
 }

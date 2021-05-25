@@ -7,3 +7,13 @@ C:\Users\gaa61\source\repos\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.csproj.Ge
 C:\Users\gaa61\source\repos\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.csproj.CoreCompileInputs.cache
 C:\Users\gaa61\source\repos\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.exe
 C:\Users\gaa61\source\repos\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.pdb
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\bin\Debug\Mestintv.1.exe.config
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\bin\Debug\Mestintv.1.exe
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\bin\Debug\Mestintv.1.pdb
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.csprojAssemblyReference.cache
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\obj\Debug\Mestintv._1.Properties.Resources.resources
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.csproj.GenerateResource.cache
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.csproj.CoreCompileInputs.cache
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.exe
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\obj\Debug\Mestintv.1.pdb
+C:\Users\gaa61\Desktop\afp\MestInt\Mestintv.1\Mestintv.1\obj\Debug\Mestintv._1.Form1.resources
