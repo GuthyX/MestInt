@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Keresok\Backtrack.cs" />
     <Compile Include="AllapotTer\Csomopont.cs" />
+    <Compile Include="Keresok\BestFirst.cs" />
     <Compile Include="Keresok\Kereso.cs" />
     <Compile Include="Keresok\Melyesgi.cs" />
     <Compile Include="Keresok\szelessegi.cs" />

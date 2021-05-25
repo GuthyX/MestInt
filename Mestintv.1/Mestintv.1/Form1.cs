@@ -20,7 +20,7 @@ namespace Mestintv._1
         int aktualisAllapotIndex = 0;
         public Form1()
         {
-            keresok.Add(new Backtrack());
+            keresok.Add(new BestFirst());
             InitializeComponent();
             foreach (Kereso k in keresok)
             {

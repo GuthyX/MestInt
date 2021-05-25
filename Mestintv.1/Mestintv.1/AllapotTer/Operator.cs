@@ -84,9 +84,9 @@ namespace Mestintv._1.AllapotTer
 
 
             //Thread.Sleep(100);
-            //Console.WriteLine(ujAllapot.ToString());
-        
-         
+            Console.WriteLine(ujAllapot.ToString());
+
+
 
             return ujAllapot;
         }
