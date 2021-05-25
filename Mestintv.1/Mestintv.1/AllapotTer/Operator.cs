@@ -82,14 +82,15 @@ namespace Mestintv._1.AllapotTer
                 }
             }
 
-           
-          
+
+            //Thread.Sleep(100);
             //Console.WriteLine(ujAllapot.ToString());
         
          
 
             return ujAllapot;
         }
+       
 
         public bool Elofeltetel(Allapot allapot)
         {
@@ -104,7 +105,7 @@ namespace Mestintv._1.AllapotTer
             {
                 return false;
             }
-       
+            
             int segedx = 0;
             int segedy = 0;
 
@@ -155,9 +156,14 @@ namespace Mestintv._1.AllapotTer
             {
                 return false;
             }
-        
 
-         
+            if (segedx - 1 == x && segedy - 1 == y ||
+                segedx - 1 == x && segedy + 1 == y ||
+                segedx + 1 == x && segedy - 1 == y ||
+                segedx + 1 == x && segedy + 1 == y)
+            {
+                return false;
+            }
          return true;
         }
     }

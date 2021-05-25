@@ -9,6 +9,7 @@ namespace Mestintv._1.Keresok
 {
     class Backtrack : Kereso
     {
+        int f = 0;
         public Backtrack()
         {
             Kereses();
@@ -32,6 +33,11 @@ namespace Mestintv._1.Keresok
                         if (!ut.Contains(ujCsomopont))
                         {
                             ut.Push(ujCsomopont);
+                            if (f > 100)
+                            {
+                                break;
+                            }
+                            f++;
                         }
                     }
                     aktualisCsomopont.OperatorIndex++;

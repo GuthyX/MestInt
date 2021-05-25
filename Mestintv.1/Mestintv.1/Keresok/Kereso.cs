@@ -84,7 +84,7 @@ namespace Mestintv._1.Keresok
             //operatorok.Add(new Operator("P1", 2, 0));
             //operatorok.Add(new Operator("P1", 1, 1));
             //operatorok.Add(new Operator("P1", 0, 1));
-         
+
 
         }
 
