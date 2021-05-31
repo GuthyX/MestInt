@@ -62,6 +62,7 @@
     <Compile Include="Keresok\BestFirst.cs" />
     <Compile Include="Keresok\Kereso.cs" />
     <Compile Include="Keresok\Melyesgi.cs" />
+    <Compile Include="Keresok\Optimalis.cs" />
     <Compile Include="Keresok\szelessegi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

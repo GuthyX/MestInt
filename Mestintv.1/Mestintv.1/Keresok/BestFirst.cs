@@ -40,11 +40,7 @@ namespace Mestintv._1.Keresok
                         if (!nyiltCsucsok.Contains(ujCsomopont) && !zartCsucsok.Contains(ujCsomopont))
                         {
                             aktualisGyerekek.Add(ujCsomopont);
-                            if (f > 1000)
-                            {
-                                break;
-                            }
-                            f++;
+                       
                         }
                     }
                 }

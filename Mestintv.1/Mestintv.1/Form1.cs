@@ -15,23 +15,77 @@ namespace Mestintv._1
 {
     public partial class Form1 : Form
     {
+        private const int size = 40;
+        private const int space = 30;
         List<Kereso> keresok = new List<Kereso>();
         List<Allapot> megoldasok = new List<Allapot>();
         int aktualisAllapotIndex = 0;
+        Graphics formGraphics;
         public Form1()
         {
-            keresok.Add(new BestFirst());
+            keresok.Add(new Backtrack());
+            //keresok.Add(new Melysegi());
+            //keresok.Add(new BestFirst());
             InitializeComponent();
-            foreach (Kereso k in keresok)
-            {
-                Console.WriteLine(" \n----Utvonalak----\n" + k.GetType().Name + "\n------------");
-                foreach (Allapot a in k.Utvonal)
-                {
+            //foreach (Kereso k in keresok)
+            //{
+            //    Console.WriteLine(" \n----Utvonalak----\n" + k.GetType().Name + "\n------------");
+            //    foreach (Allapot a in k.Utvonal)
+            //    {
                   
-                    Console.WriteLine(a.ToString());
+            //        Console.WriteLine(a.ToString());
+            //    }
+            //}
+            foreach (Kereso kereso in keresok)
+            {
+                comboBox1.Items.Add(kereso.GetType().Name);
+            }
+            //comboBox1.SelectedIndex = 0;
+            label1.Text = keresok[0].Utvonal.Count.ToString();
+           
+        }
+
+        public void Draw(Graphics g , Allapot a)
+        {
+            Brush brush;
+            for (int j = 0; j < a.matrix.GetLength(0); j++)
+            {
+                for (int i = 0; i < a.matrix.GetLength(1); i++)
+                {
+                    if (a.matrix[j, i] == "F")
+                        brush = Brushes.Black;
+                    else if (a.matrix[j, i] == "U")
+                    {
+                        brush = Brushes.White;
+                    }
+                    else if (a.matrix[j, i] == "Z1" || a.matrix[j, i] == "Z2" || a.matrix[j, i] == "Z3")
+                    {
+                        brush = Brushes.Green;
+                    }
+                    else if (a.matrix[j, i] == "P1" || a.matrix[j, i] == "P2" || a.matrix[j, i] == "P3")
+                    {
+                        brush = Brushes.Red;
+                    }
+                    else brush = Brushes.AliceBlue;
+                    g.FillRectangle(brush, i * (size + space), j * (size + space), size, size);
                 }
             }
-            label1.Text = keresok[0].Utvonal.Count.ToString();
+            label1.Text = megoldasok.Count.ToString();
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            for (int i = 0; i < keresok[0].Utvonal.Count ; i++)
+            {
+                Draw(e.Graphics, keresok[0].Utvonal[i]);
+               
+            }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

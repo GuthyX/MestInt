@@ -28,8 +28,9 @@ namespace Mestintv._1.Keresok
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    operatorok.Add(new Operator("P2", i, j));
                     operatorok.Add(new Operator("Z2", i, j));
+                    operatorok.Add(new Operator("P2", i, j));
+                 
                     operatorok.Add(new Operator("Z1", i, j));
                     operatorok.Add(new Operator("P1", i, j));
                     operatorok.Add(new Operator("Z3", i, j));

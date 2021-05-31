@@ -33,11 +33,11 @@ namespace Mestintv._1.Keresok
                         if (!ut.Contains(ujCsomopont))
                         {
                             ut.Push(ujCsomopont);
-                            if (f > 100)
-                            {
-                                break;
-                            }
-                            f++;
+                            //if (f > 100)
+                            //{
+                            //    break;
+                            //}
+                            //f++;
                         }
                     }
                     aktualisCsomopont.OperatorIndex++;
