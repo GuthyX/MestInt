@@ -19,13 +19,13 @@ namespace Mestintv._1
         private const int space = 30;
         List<Kereso> keresok = new List<Kereso>();
         List<Allapot> megoldasok = new List<Allapot>();
-        int aktualisAllapotIndex = 0;
+        int aktualisAllapotIndex = 366;
         Graphics formGraphics;
         public Form1()
         {
             keresok.Add(new Backtrack());
-            //keresok.Add(new Melysegi());
-            //keresok.Add(new BestFirst());
+            keresok.Add(new Melysegi());
+            keresok.Add(new BestFirst());
             InitializeComponent();
             //foreach (Kereso k in keresok)
             //{
@@ -40,13 +40,18 @@ namespace Mestintv._1
             {
                 comboBox1.Items.Add(kereso.GetType().Name);
             }
-            //comboBox1.SelectedIndex = 0;
-            label1.Text = keresok[0].Utvonal.Count.ToString();
+            
            
         }
-
-        public void Draw(Graphics g , Allapot a)
+      
+        public void Draw( Graphics g ,Allapot a)
         {
+            int pB_W = pictureBox1.Width;
+            int pB_H = pictureBox1.Height;
+            Bitmap image = new Bitmap(pB_W, pB_H);
+            pictureBox1.Image = image;
+            g = Graphics.FromImage(image);
+
             Brush brush;
             for (int j = 0; j < a.matrix.GetLength(0); j++)
             {
@@ -70,22 +75,61 @@ namespace Mestintv._1
                     g.FillRectangle(brush, i * (size + space), j * (size + space), size, size);
                 }
             }
-            label1.Text = megoldasok.Count.ToString();
+           
         }
-
+        static Graphics g;
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            for (int i = 0; i < keresok[0].Utvonal.Count ; i++)
-            {
-                Draw(e.Graphics, keresok[0].Utvonal[i]);
-               
-            }
-            
+            g = e.Graphics;
+                
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (keresok[comboBox1.SelectedIndex].Utvonal.Count == aktualisAllapotIndex)
+            {
 
+            }
+            else
+            {
+                Draw(g, keresok[comboBox1.SelectedIndex].Utvonal[aktualisAllapotIndex]);
+                aktualisAllapotIndex++;
+                label2.Text = aktualisAllapotIndex.ToString();
+                label1.Text = keresok[comboBox1.SelectedIndex].Utvonal.Count.ToString();
+            }
+   
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (aktualisAllapotIndex == 0)
+            {
+                Draw(g, keresok[comboBox1.SelectedIndex].Utvonal[aktualisAllapotIndex]);
+                
+                label2.Text = aktualisAllapotIndex.ToString();
+           
+            }
+            else if (aktualisAllapotIndex > 0)
+            {
+                Draw(g, keresok[comboBox1.SelectedIndex].Utvonal[aktualisAllapotIndex]);
+                
+                label2.Text = aktualisAllapotIndex.ToString();
+                aktualisAllapotIndex--;
+            }
+            else if (aktualisAllapotIndex == keresok[comboBox1.SelectedIndex].Utvonal.Count)       
+            {
+                aktualisAllapotIndex--;
+                Draw(g, keresok[comboBox1.SelectedIndex].Utvonal[aktualisAllapotIndex]);
+
+                label2.Text = aktualisAllapotIndex.ToString();
+            }
+         
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            aktualisAllapotIndex =0;
         }
     }
 }
