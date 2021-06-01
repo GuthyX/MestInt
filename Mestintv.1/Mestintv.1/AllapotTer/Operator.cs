@@ -93,6 +93,7 @@ namespace Mestintv._1.AllapotTer
         public bool Elofeltetel(Allapot allapot)
         {
 
+            //Ne tudjon F helyre lépni(Ahol fal van)
 
             if (allapot.matrix[x, y] == "F")
             {
@@ -100,7 +101,7 @@ namespace Mestintv._1.AllapotTer
             }
 
         
-
+            //Ne lépjen rá más bábura
             if (allapot.matrix[x, y] == "Z2" || allapot.matrix[x, y] == "Z1" || allapot.matrix[x, y] == "Z3" ||
                 allapot.matrix[x, y] == "P1" || allapot.matrix[x, y] == "P2" || allapot.matrix[x, y] == "P3")
             {
@@ -109,7 +110,7 @@ namespace Mestintv._1.AllapotTer
 
             int segedx = 0;
             int segedy = 0;
-
+            // itt a jelenlegi pozicionak a kordinátáját keresi ki
             for (int i = 0; i < allapot.matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < allapot.matrix.GetLength(1); j++)
@@ -123,17 +124,7 @@ namespace Mestintv._1.AllapotTer
                 }
             }
 
-     
-
-
-
-
-
-
-
-
-
-
+                //Azt vizsgálja hogy a 4 sarokban van e már valamelyik és ha igen akkor az maradjon ott
             if (segedx == 4 && segedy == 0 && nev == "Z1" || /*segedx == 4 && segedy == 1 && nev == "Z2" ||*/ segedx == 4 && segedy == 2 && nev == "Z3" ||
               segedx == 4 && segedy == 0 && nev == "Z1" || /*segedx == 4 && segedy == 1 && nev == "Z3" ||*/ segedx == 4 && segedy == 2 && nev == "Z2" ||
               segedx == 4 && segedy == 0 && nev == "Z2" || /*segedx == 4 && segedy == 1 && nev == "Z1" ||*/ segedx == 4 && segedy == 2 && nev == "Z3" ||
@@ -154,7 +145,7 @@ namespace Mestintv._1.AllapotTer
             }
 
          
-
+            //Itt vizsgálja hogy csak egy kockát léphet
             if (segedx+1 < x)
             {
                 return false;
@@ -171,7 +162,7 @@ namespace Mestintv._1.AllapotTer
             {
                 return false;
             }
-
+            //Az átlós lépések kizárása
             if (segedx - 1 == x && segedy - 1 == y ||
                 segedx - 1 == x && segedy + 1 == y ||
                 segedx + 1 == x && segedy - 1 == y ||
