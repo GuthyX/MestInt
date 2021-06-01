@@ -2,13 +2,7 @@
 using Mestintv._1.Keresok;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mestintv._1
@@ -17,10 +11,8 @@ namespace Mestintv._1
     {
         private const int size = 40;
         private const int space = 30;
-        List<Kereso> keresok = new List<Kereso>();
-        List<Allapot> megoldasok = new List<Allapot>();
-        int aktualisAllapotIndex = 0;
-        Graphics formGraphics;
+        List<Kereso> keresok = new List<Kereso>(); 
+        int aktualisAllapotIndex = 0;    
         public Form1()
         {
             keresok.Add(new Backtrack());
@@ -40,8 +32,9 @@ namespace Mestintv._1
             {
                 comboBox1.Items.Add(kereso.GetType().Name);
             }
-            
-           
+
+            label3.Text = "Lépések";
+            label4.Text = "Össz lépése";
         }
       
         public void Draw( Graphics g ,Allapot a)
@@ -87,17 +80,25 @@ namespace Mestintv._1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (keresok[comboBox1.SelectedIndex].Utvonal.Count == aktualisAllapotIndex)
+            if (comboBox1.SelectedItem == null)
             {
-
+                MessageBox.Show("Nem valasztott a lsitabol");
             }
             else
             {
-                Draw(g, keresok[comboBox1.SelectedIndex].Utvonal[aktualisAllapotIndex]);
-                aktualisAllapotIndex++;
-                label2.Text = aktualisAllapotIndex.ToString();
-                label1.Text = keresok[comboBox1.SelectedIndex].Utvonal.Count.ToString();
+                if (keresok[comboBox1.SelectedIndex].Utvonal.Count == aktualisAllapotIndex)
+                {
+
+                }
+                else
+                {
+                    Draw(g, keresok[comboBox1.SelectedIndex].Utvonal[aktualisAllapotIndex]);
+                    aktualisAllapotIndex++;
+                    label2.Text = aktualisAllapotIndex.ToString();
+                    label1.Text = keresok[comboBox1.SelectedIndex].Utvonal.Count.ToString();
+                }
             }
+         
    
         }
 
