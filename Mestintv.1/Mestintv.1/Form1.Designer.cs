@@ -43,9 +43,9 @@ namespace Mestintv._1
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(602, 202);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(10, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = ".";
             // 
             // pictureBox1
             // 
@@ -71,7 +71,7 @@ namespace Mestintv._1
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
+            this.button1.Text = "Előre";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -80,9 +80,10 @@ namespace Mestintv._1
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(602, 152);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(10, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.label2.Text = ".";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
@@ -90,7 +91,7 @@ namespace Mestintv._1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
+            this.button2.Text = "Hátra";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

@@ -19,7 +19,7 @@ namespace Mestintv._1
         private const int space = 30;
         List<Kereso> keresok = new List<Kereso>();
         List<Allapot> megoldasok = new List<Allapot>();
-        int aktualisAllapotIndex = 366;
+        int aktualisAllapotIndex = 0;
         Graphics formGraphics;
         public Form1()
         {
@@ -130,6 +130,11 @@ namespace Mestintv._1
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             aktualisAllapotIndex =0;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

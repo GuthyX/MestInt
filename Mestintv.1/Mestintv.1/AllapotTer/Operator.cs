@@ -83,9 +83,7 @@ namespace Mestintv._1.AllapotTer
             }
 
 
-            //Thread.Sleep(100);
-            //Console.WriteLine(ujAllapot.ToString());
-
+          
 
 
             return ujAllapot;
@@ -128,23 +126,6 @@ namespace Mestintv._1.AllapotTer
      
 
 
-            //if (allapot.matrix[segedx, segedy] == "Z2" && segedx == 2 && segedy == 0)
-            //{
-            //    if (allapot.matrix[segedx+1,segedy+1] == "U" || allapot.matrix[segedx + 2, segedy + 1] == "U")
-            //    {
-            //        return false;
-            //    }
-
-            //}
-            //if (allapot.matrix[segedx, segedy] == "P2" && segedx == 2 && segedy == 0)
-            //{
-            //    if (allapot.matrix[segedx -1, segedy + 1] == "U" || allapot.matrix[segedx -2, segedy + 1] == "U")
-            //    {
-            //        return false;
-            //    }
-
-            //}
-          
 
 
 
@@ -172,26 +153,7 @@ namespace Mestintv._1.AllapotTer
                 return false;
             }
 
-            //if (segedx == 4 && segedy == 0 && nev == "Z1" && segedx == 4 && segedy == 2 && nev == "Z3" && segedx == 4 && segedy == 1 && nev == "Z2" ||
-            //  segedx == 4 && segedy == 0 && nev == "Z1" && segedx == 4 && segedy == 2 && nev == "Z2" && segedx == 4 && segedy == 1 && nev == "Z3" ||
-            //  segedx == 4 && segedy == 0 && nev == "Z2" && segedx == 4 && segedy == 2 && nev == "Z3" && segedx == 4 && segedy == 1 && nev == "Z1" ||
-            //  segedx == 4 && segedy == 0 && nev == "Z2" && segedx == 4 && segedy == 2 && nev == "Z1" && segedx == 4 && segedy == 1 && nev == "Z3" ||
-            //  segedx == 4 && segedy == 0 && nev == "Z3" && segedx == 4 && segedy == 2 && nev == "Z1" && segedx == 4 && segedy == 1 && nev == "Z2" ||
-            //  segedx == 4 && segedy == 0 && nev == "Z3" && segedx == 4 && segedy == 2 && nev == "Z2" && segedx == 4 && segedy == 1 && nev == "Z1")
-            //{
-            //    return false;
-            //}
-
-            //if (segedx == 0 && segedy == 0 && nev == "P1" && segedx == 0 && segedy == 2 && nev == "P3" && segedx == 0 && segedy == 1 && nev == "P2" ||
-            //  segedx == 0 && segedy == 0 && nev == "P1" && segedx == 0 && segedy == 2 && nev == "P2" && segedx == 0 && segedy == 1 && nev == "P3" ||
-            //  segedx == 0 && segedy == 0 && nev == "P2" && segedx == 0 && segedy == 2 && nev == "P3" && segedx == 0 && segedy == 1 && nev == "P1" ||
-            //  segedx == 0 && segedy == 0 && nev == "P2" && segedx == 0 && segedy == 2 && nev == "P1" && segedx == 0 && segedy == 1 && nev == "P3" ||
-            //  segedx == 0 && segedy == 0 && nev == "P3" && segedx == 0 && segedy == 2 && nev == "P1" && segedx == 0 && segedy == 1 && nev == "P2" ||
-            //  segedx == 0 && segedy == 0 && nev == "P3" && segedx == 0 && segedy == 2 && nev == "P2" && segedx == 0 && segedy == 1 && nev == "P1")
-            //{
-            //    return false;
-            //}
-
+         
 
             if (segedx+1 < x)
             {
